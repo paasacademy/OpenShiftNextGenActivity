@@ -341,7 +341,11 @@
                            {
                               "name": "MONGODB_ADMIN_PASSWORD",
                               "value": "${MONGODB_ADMIN_PASSWORD}"
-                           }
+                           },
+                           {
+                              "name": "OPENSHIFT_TEMPLATE",
+                              "value": "YES"
+                           }                           
                         ],
                         "resources": {},
                         "terminationMessagePath": "/dev/termination-log",
