@@ -29,8 +29,8 @@ public class DBConnection {
 	
 	@PostConstruct
 	public void afterCreate() {
-String mongoHost = (System.getenv("MONGODB_SERVICE_HOST") == null) ? System.getenv("MONGODB_TEMPLATE_SERVICE_HOST") : System.getenv("MONGODB_SERVICE_HOST");
-		String mongoPort = (System.getenv("MONGODB_SERVICE_PORT") == null) ? System.getenv("MONGODB_TEMPLATE_SERVICE_PORT") : System.getenv("MONGODB_SERVICE_PORT"); 
+String mongoHost = (System.getenv("OPENSHIFT_TEMPLATE") == null) ? System.getenv("MONGODB_SERVICE_HOST") : System.getenv("MONGODB_TEMPLATE_SERVICE_HOST");
+		String mongoPort = (System.getenv("OPENSHIFT_TEMPLATE") == null) ? System.getenv("MONGODB_SERVICE_PORT") : System.getenv("MONGODB_TEMPLATE_SERVICE_PORT"); 
 		String mongoUser = (System.getenv("MONGODB_USER")== null) ? "mlbparks" : System.getenv("MONGODB_USER");
 		String mongoPassword = (System.getenv("MONGODB_PASSWORD") == null) ? "mlbparks" : System.getenv("MONGODB_PASSWORD");
 		String mongoDBName = (System.getenv("MONGODB_DATABASE") == null) ? "mlbparks" : System.getenv("MONGODB_DATABASE");
