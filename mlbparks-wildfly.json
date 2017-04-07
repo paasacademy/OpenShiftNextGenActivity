@@ -379,7 +379,7 @@
          "kind": "Service",
          "apiVersion": "v1",
          "metadata": {
-            "name": "mongodb"
+            "name": "mongodb-template"
          },
          "spec": {
             "ports": [
